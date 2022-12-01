@@ -36,12 +36,10 @@ def main():
     calories = parse_input()
 
     print("---- [Part 1] ----")
-    output_1 = find_answer_part_one(calories)
-    print(f"Biggest value is: {output_1}")
+    print(f"Biggest value is: {find_answer_part_one(calories)}")
 
     print("---- [Part 2] ----")
-    output_2 = find_answer_part_two(calories)
-    print(f"Combining results from top 3 is: {output_2}")
+    print(f"Combining results from top 3 is: {find_answer_part_two(calories)}")
 
 if __name__ == '__main__':
     main()
