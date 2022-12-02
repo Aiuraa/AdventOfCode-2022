@@ -1,13 +1,13 @@
 #
 # AdventOfCode 2022 - Day 1
-# By: Aiuraa using python
+# By: Aiura using python
 #
 
-def parse_input() -> list:
+def parse_input(input_file: str) -> list:
     sum_val = 0
     output = []
 
-    with open("code/day1/input/day1.txt") as f:
+    with open(input_file) as f:
         for str_num in f.read().strip().split("\n"):
             if str_num == '':
                 output.append(sum_val)
@@ -19,13 +19,11 @@ def parse_input() -> list:
     return output
 
 # Part 1
-def part_one() -> int:
-    calories = parse_input()
+def part_one(calories: list) -> int:
     return max(calories)
 
 # Part 2
-def part_two() -> int:
-    calories = parse_input()
+def part_two(calories: list) -> int:
     calories.sort()
 
     print(f"Top 1: {calories[-1]}")
@@ -34,12 +32,14 @@ def part_two() -> int:
 
     return (calories[-1] + calories[-2] + calories[-3])
 
-def display():
-    print("---- [Part 1] ----")
-    print(f"Biggest value is: {part_one()}")
-    print("")
-    print("---- [Part 2] ----")
-    print(f"Combining results from top 3 is: {part_two()}")
+def solve(input_file: str) -> None:
+    calories = parse_input(input_file)
 
-if __name__ == '__main__':
-    display()
+    print("Part 1:")
+    print(f"Biggest value is: {part_one(calories)}")
+    print("")
+    print("Part 2:")
+    print(f"Combining results from top 3 is: {part_two(calories)}")
+
+if __name__ == "__main__":
+    solve("input.txt")
