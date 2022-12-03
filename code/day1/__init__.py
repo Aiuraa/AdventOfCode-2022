@@ -36,10 +36,10 @@ def solve(input_file: str) -> None:
     calories = parse_input(input_file)
 
     print("Part 1:")
-    print(f"Biggest value is: {part_one(calories)}")
-    print("")
+    print(f"Biggest value is: {part_one(calories)}\n")
+
     print("Part 2:")
-    print(f"Combining results from top 3 is: {part_two(calories)}")
+    print(f"Combining results from top 3 is: {part_two(calories)}\n")
 
 if __name__ == "__main__":
     solve("input.txt")

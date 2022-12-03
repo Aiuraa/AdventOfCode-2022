@@ -90,10 +90,10 @@ def solve(input_file: str) -> None:
     input = parse_input(input_file)
 
     print("Part 1:")
-    print(f"Results from game 1 is: {part_one(input)}")
-    print("")
+    print(f"Results from game 1 is: {part_one(input)}\n")
+
     print("Part 2:")
-    print(f"Results from game 2 is: {part_two(input)}")
+    print(f"Results from game 2 is: {part_two(input)}\n")
 
 if __name__ == "__main__":
     solve("input.txt")
