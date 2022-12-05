@@ -44,10 +44,10 @@ def solve(input_file: str) -> None:
     inventory = parse_input(input_file)
     
     print("Part 1:")
-    print(f"The result is: {find_items(inventory)}\n")
+    print(f"The sum in both compartments of rucksack is: {find_items(inventory)}\n")
 
     print("Part 2:")
-    print(f"The result is: {find_item_stickers(inventory)}\n")
+    print(f"The sum for ruckstack badge sticker is: {find_item_stickers(inventory)}\n")
 
 if __name__ == "__main__":
     solve("input.txt")
