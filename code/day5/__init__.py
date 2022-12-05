@@ -22,7 +22,7 @@ def get_stack_map(input: list) -> list:
     maps = input[0].split("\n")
 
     # Prepare stacks
-    max_stack = int(max(maps[len(maps)-1][:-1]))
+    max_stack = int(max(maps[-1][:-1]))
     stacks = [[] for _ in range(max_stack)]
     draw_maps = len(maps)-1
 
